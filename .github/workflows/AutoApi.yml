@@ -12,8 +12,6 @@ on:
   schedule:
     - cron: '0 16 * * *'
     - cron: '0 */4 * * *'
-  watch:
-    types: [started]
    
 jobs:
   build:
