@@ -1,19 +1,16 @@
 #自动调用api保活,无加密版
 name: Auto Api
-
+   
 on: 
   release:
     types: [published]
   push:
-    tags:
-    - 'v*'
-  #  branches: 
-  #    - master
+    branches: 
+      - master
+  schedule:
+    - cron: '12 */3 * * *'
   watch:
     types: [started]
-    schedule:
-    - cron: '0 16 * * *'
-    - cron: '0 */4 * * *'
    
 jobs:
   build:
