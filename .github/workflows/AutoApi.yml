@@ -32,9 +32,7 @@ jobs:
     - name: Test Api #Api调用
       run: |
         echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.log
-        python 1.py
-        
-           
+        python 1.py   
     - name: commit #上传新的refresh_token
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
